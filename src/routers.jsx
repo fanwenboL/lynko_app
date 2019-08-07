@@ -3,12 +3,13 @@ import { Router, Route } from 'react-router';
 import App from './app/App';
 import About from './app/About';
 import Layout from './layout/index';
+import { Provider } from 'react-redux';
 
-const Routers = ({ history }) => {
-    return <Layout><Router history={history}>
+const Routers = ({ history, store }) => {
+    return <Layout><Provider store={store}><Router history={history}>
         < Route path='/' exact component={App} ></Route>
         < Route path='/about' component={About} ></Route>
-    </Router >
+    </Router ></Provider>
     </Layout>
 };
 export default Routers;
