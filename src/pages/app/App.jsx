@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import * as Act from './action';
-import creatStore from './reduxModel';
+import styles from './App.less';
+import * as Act from './modle/action';
+// import creatStore from './reduxModel';
 import { connect } from 'react-redux';
 import { createStore } from 'redux';
 class App extends React.Component {
@@ -11,16 +11,16 @@ class App extends React.Component {
 
     }
   }
-  componentDidMount(){
-    
+  componentDidMount() {
+    console.log(styles, 'stylesstyles')
   }
   render() {
     return (
-      <div className="App" onClick={() => {
+      <div className={styles.App} onClick={() => {
         this.props.dispatch(Act.reducersaAct({ data: 'dashuage' }))
       }
       }>
-        fawnenboTest
+        <div className={styles.AppLogo}>fawnenboTest</div>
       </div >
     );
   }

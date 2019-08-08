@@ -6,7 +6,7 @@ import Routers from './routers';
 import createSagaMiddleware from 'redux-saga';
 import { routerMiddleware } from 'react-router-redux';
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
-import demoSaga from './app/index';
+import demoSaga from './pages/app/index';
 let models = [...demoSaga];
 // console.log(models, 'modelsmodels')
 let sagaMiddleware = createSagaMiddleware();
